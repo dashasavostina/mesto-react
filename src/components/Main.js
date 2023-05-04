@@ -34,17 +34,17 @@ export default function Main(props) {
             <div className="profile__info">
               <div className="profile__avatar">
               <img src={`${userAvatar}`} alt="аватар профиля" className="profile__avatar-img"/>
-              <button className="profile__avatar-edit" type="button" onClick={props.onEditAvatar}></button>
+              <button className="profile__avatar-edit" type="button" onClick={props.onEditAvatar}/>
             </div>
               <div className="profile__group">
                 <div className="profile__text">
                   <h1 className="profile__title" >{userName}</h1>
                   <p className="profile__subtitle" >{userDescription}</p>
                 </div> 
-                <button className="profile__edit-button" type="button" onClick={props.onEditProfile}></button>
+                <button className="profile__edit-button" type="button" onClick={props.onEditProfile}/>
               </div>
             </div>
-            <button className="profile__add-button" type="button" onClick={props.onAddPlace}></button>
+            <button className="profile__add-button" type="button" onClick={props.onAddPlace}/>
            </section>
            <section className="elements">
                {cards.map((card) => (

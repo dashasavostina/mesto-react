@@ -66,7 +66,12 @@ function App() {
         name = 'avatar-add'
         children = {
           <><label className="popup__form-field">
-            <input id="avatar-input" type="url" name="avatar" className="popup__input popup__input_type_avatar" placeholder="Ссылка на аватар" required />
+            <input 
+            id="avatar-input" 
+            type="url" name="avatar" 
+            className="popup__input popup__input_type_avatar" 
+            placeholder="Ссылка на аватар" 
+            required />
             <span className="avatar-input-error popup__input-error"></span>
           </label><button className="popup__submit" type="submit">Сохранить</button></>
          }
@@ -79,11 +84,27 @@ function App() {
         name = 'edit'
         children = {
          <><label className="popup__form-field">
-          <input id="name-input" type="text" name="name" className="popup__input popup__input_type_name" placeholder="Имя" required minLength="2" maxLength="40"/>
+          <input 
+          id="name-input" 
+          type="text" 
+          name="name" 
+          className="popup__input popup__input_type_name" 
+          placeholder="Имя" 
+          required 
+          minLength="2" 
+          maxLength="40"/>
           <span className="name-input-error popup__input-error"></span>
         </label>
         <label class="popup__form-field">
-          <input id="job-input" type="text" name="job" className="popup__input popup__input_type_job" placeholder="О себе" required minLength="2" maxLength="40"/>
+          <input 
+          id="job-input" 
+          type="text" 
+          name="job" 
+          className="popup__input popup__input_type_job" 
+          placeholder="О себе" 
+          required 
+          minLength="2" 
+          maxLength="40"/>
           <span className="job-input-error popup__input-error"></span>
         </label>
         <button className="popup__submit" type="submit">Сохранить</button></>
@@ -96,11 +117,25 @@ function App() {
        name = 'add-form'
        children = {
          <><label className="popup__form-field">
-         <input id="title-input" type="text" name="title" className="popup__input popup__input_type_title" placeholder="Название" required minLength="2" maxLength="30" />
+         <input 
+         id="title-input" 
+         type="text" 
+         name="title" 
+         className="popup__input popup__input_type_title" 
+         placeholder="Название" 
+         required 
+         minLength="2" 
+         maxLength="30" />
          <span className="title-input-error popup__input-error"></span>
        </label>
        <label class="popup__form-field">
-         <input id="url-input" type="url" name="image" className="popup__input popup__input_type_image" placeholder="Ссылка на картинку" required />
+         <input 
+         id="url-input"
+         type="url" 
+         name="image" 
+         className="popup__input popup__input_type_image" 
+         placeholder="Ссылка на картинку" 
+         required />
          <span className="url-input-error popup__input-error"></span>
        </label>
        <button className="popup__submit popup__submit_add" type="submit">Создать</button></>
@@ -114,7 +149,7 @@ function App() {
       <PopupWithForm
         isOpen = {isConfirmPopupOpen}
         onClose = {closeAllPopups}
-        title= 'Вы уверены'
+        title= 'Вы уверены?'
         name = 'confirm'
         children = {
           <button class="popup__submit popup__submit_confirm" type="submit">Да</button>
