@@ -12,6 +12,7 @@ function App() {
   const [isEditProfilePopupOpen, setEditProfilePopupOpen] = useState(false);
   const [isAddPlacePopupOpen, setAddPlacePopupOpen] = useState(false);
   const [isEditAvatarPopupOpen, setEditAvatarPopupOpen] = useState(false);
+  const [isConfirmPopupOpen, setIsConfirmPopupOpen] = useState(false);
   const [selectedCard, setSelectedCard] = useState({});
   const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
 
@@ -22,6 +23,10 @@ function App() {
       name: card.name,
       link: card.link
     })
+  }
+
+  function handleConfirmClick() {
+    setIsConfirmPopupOpen(true);
   }
 
   function handleEditAvatarClick() {
@@ -106,6 +111,15 @@ function App() {
       onClose = {closeAllPopups}
       card = {selectedCard}
       />
+      <PopupWithForm
+        isOpen = {isConfirmPopupOpen}
+        onClose = {closeAllPopups}
+        title= 'Вы уверены'
+        name = 'confirm'
+        children = {
+          <button class="popup__submit popup__submit_confirm" type="submit">Да</button>
+         }
+       />
       </body>)
 }
 
