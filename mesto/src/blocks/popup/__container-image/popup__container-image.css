@@ -1,0 +1,11 @@
+.popup__container-image {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup__container-image:hover {
+    cursor: auto;
+}
