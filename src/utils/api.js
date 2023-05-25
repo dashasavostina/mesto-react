@@ -14,7 +14,7 @@ import {apiData} from "./utils";
       }
     }
 
-    addNewCard({ name, link}) {
+    addNewCard(name, link) {
       return fetch(`${this._link}cards`, {
         headers: this._headers,
         method: 'POST',
@@ -65,21 +65,21 @@ import {apiData} from "./utils";
           .then(res => { return this._serverResponceProcessing(res) })
       }
 
-    sendCardLike(cardId) {
+    changeLikeCardStatus(cardId, isLiked) {
+      if (isLiked) {
         return fetch(`${this._link}cards/${cardId}/likes`, {
           headers: this._headers,
           method: 'PUT',
         })
           .then(res => { return this._serverResponceProcessing(res) })
-      }
-
-    deleteCardLike(cardId) {
+      } else {
         return fetch(`${this._link}cards/${cardId}/likes`, {
           headers: this._headers,
           method: 'DELETE',
         })
           .then(res => { return this._serverResponceProcessing(res) })
       }
+    }
 }
 
 export const apiJoin = new Api(apiData);
