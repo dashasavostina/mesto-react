@@ -10,22 +10,22 @@
 
 ## Стек технологий
 
-• HTML 5
-• CSS 3
-• JavaScript
-• React
+- HTML
+- CSS 3
+- JavaScript
+- React
 
 ## С применением
 
-• Flexbox
-• Функциональные компоненты (React)
-• NPM
-• Webpack
-• API (POST, GET, PUT, DELETE)
-• Grid Layout
-• Media queries
-• Nested БЭМ
-• Popup
+- Flexbox
+- Функциональные компоненты (React)
+- NPM
+- Webpack
+- API (POST, GET, PUT, DELETE)
+- Grid Layout
+- Media queries
+- Nested БЭМ
+- Popup
 
 
 ### `npm start`
